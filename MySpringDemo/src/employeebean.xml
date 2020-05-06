@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans
+      xmlns="http://www.springframework.org/schema/beans"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns:context="http://www.springframework.org/schema/context"
+      xsi:schemaLocation="http://www.springframework.org/schema/beans
+      http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+      http://www.springframework.org/schema/context
+      http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+      
+     <context:component-scan base-package="com.axel.axel"></context:component-scan>
+     <bean id="e1" class="com.axel.Employee">
+         <property name="eid" value="102"></property>
+         <property name="name" value="Michael"></property>
+         <property name="salary" value="50000"></property>
+         <property name="dept" value="HR"></property>
+         <property name="email" value="michael@abc.com"></property>
+     </bean>
+     
+     <bean id="e2" class="com.axel.Employee" scope="prototype">
+         <property name="eid" value="105"></property>
+         <property name="name" value="Patrice"></property>
+         <property name="salary" value="57000"></property>
+         <property name="dept" value="HR"></property>
+         <property name="email" value="patricel@abc.com"></property>
+     </bean>
+     
+     <context:annotation-config></context:annotation-config>
+         
+</beans>
